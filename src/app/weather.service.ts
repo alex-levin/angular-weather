@@ -8,8 +8,8 @@ export class WeatherService {
   
     constructor(private http: HttpClient) { }
   
-    getConfig() {
-        return this.http.get(this.configUrl);
+    getForecast() {
+        return this.http.get(this.forecastUrl);
     }
 
 }

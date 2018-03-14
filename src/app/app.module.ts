@@ -3,9 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {RouterModule, Routes} from "@angular/router";
 import { ForecastComponent } from './forecast/forecast.component';
 import { HttpClientModule } from '@angular/common/http';
 
+const appRoutes: Routes = [
+  { path: "forecast", component: ForecastComponent }
+];
 
 @NgModule({
   declarations: [
@@ -15,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     // import HttpClientModule after BrowserModule.
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
